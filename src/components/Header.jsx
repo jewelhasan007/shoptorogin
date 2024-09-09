@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import './Navlink.css'
 
 const Header = () => {
     return (
@@ -23,20 +24,19 @@ const Header = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-       <NavLink to="/"><li><a>Home</a></li></NavLink>
-        <NavLink to="/listed"><li><a>Listed Books</a></li></NavLink>
-        <NavLink to= "/read" ><li><a>Page to Read</a></li></NavLink>
-        
-        
+       <li><NavLink to="/">Home</NavLink></li>
+       <li><NavLink to="/listed">Listed Books</NavLink></li>
+       <li><NavLink to= "/read" >Page to Read</NavLink></li>
+      
       </ul>
     </div>
     <a className="btn btn-ghost text-xl">daisyUI</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-    <NavLink to="/"><li><a>Home</a></li></NavLink>
-    <NavLink to="/listed"><li><a>Listed Books</a></li></NavLink>
-    <NavLink to= "/read" ><li><a>Page to Read</a></li></NavLink>
+    <li><NavLink to="/">Home</NavLink></li>
+       <li><NavLink to="/listed">Listed Books</NavLink></li>
+       <li><NavLink to= "/read" >Page to Read</NavLink></li>
         
     </ul>
   </div>
