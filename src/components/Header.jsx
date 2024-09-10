@@ -24,52 +24,53 @@ const Header = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li><NavLink  to= "/" 
+     <li className="hover:bg-white"><NavLink  to= "/" 
     className={({isActive})=>  {
-      return isActive ? "text-green-400 font-bold border-2 border-green-400 " : "font-bold";
+      return isActive ? "text-green-400 font-bold border-2 border-green-400 bg-white " : "font-bold hover:border-green-400 bg-white";
     }}>
    Home</NavLink></li>
 
-    <li><NavLink  to= "/listed" 
+    <li className="hover:bg-white"><NavLink  to= "/listed" 
     className={({isActive})=>  {
-      return isActive ? "text-green-400 font-bold border-2 border-green-400 " : "font-bold";
+      return isActive ? "text-green-400 font-bold border-2 border-green-400 bg-white " : "font-bold hover:border-green-400 bg-white ";
     }}>
    Listed Books</NavLink></li>
 
-    <li><NavLink  to= "/read" 
+    <li className="hover:bg-white"><NavLink  to= "/read" 
     className={({isActive})=>  {
-      return isActive ? "text-green-400 font-bold border-2 border-green-400 " : "font-bold";
+      return isActive ? "text-green-400 font-bold border-2 border-green-400 :bg-white " : "font-bold hover:border-green-400 bg-white ";
     }}>
    Page to Read</NavLink></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a className="btn btn-ghost text-xl">Book Review</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
     
     <li><NavLink  to= "/" 
     className={({isActive})=>  {
-      return isActive ? "text-green-400 font-bold border-2 border-green-400 " : "font-bold";
+      return isActive ? "text-green-400 font-bold border-2 border-green-400 bg-white " : "font-bold hover:border-green-400 bg-white";
     }}>
    Home</NavLink></li>
 
     <li><NavLink  to= "/listed" 
     className={({isActive})=>  {
-      return isActive ? "text-green-400 font-bold border-2 border-green-400 bg-white hover:bg- " : "font-bold";
+      return isActive ? "text-green-400 font-bold border-2 border-green-400 bg-white" : "font-bold hover:border-green-400 bg-white ";
     }}>
    Listed Books</NavLink></li>
 
     <li><NavLink  to= "/read" 
     className={({isActive})=>  {
-      return isActive ? "text-green-400 font-bold border-2 border-green-400 " : "font-bold";
+      return isActive ? "text-green-400 font-bold border-2 border-green-400 bg-white " : "font-bold hover:border-green-400 bg-white ";
     }}>
    Page to Read</NavLink></li>
      
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    <a className="btn mx-3">Login</a>
+    <a className="btn mx-4">LogOut</a>
   </div>
 </div>
 
