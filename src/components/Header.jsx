@@ -43,7 +43,7 @@ const Header = () => {
    Page to Read</NavLink></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">Book Review</a>
+    <a className="btn btn-ghost text-xl">Book Vibe</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -69,8 +69,8 @@ const Header = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn mx-3">Login</a>
-    <a className="btn mx-4">LogOut</a>
+    <a className="btn mx-3 font-bold text-white bg-green-400 border-green-400 hover:bg-white hover:text-green-400 hover:border-green-400">Sign In</a>
+    <a className="btn mx-4 font-bold text-white bg-blue-400 border-blue-400 hover:bg-white hover:text-blue-400 hover:border-blue-400">Sign Up</a>
   </div>
 </div>
 
