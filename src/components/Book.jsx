@@ -11,7 +11,7 @@ return (
                 tags.map(hashtag => <HashTag hashtag={hashtag}></HashTag>)
             }
         </div>
-        <h3>Name: {bookName}</h3>
+        <h3 className="font-bold text-2xl"> {bookName}</h3>
         <h3>By: {author}</h3>
         <hr />
         <h3>{category}</h3>
