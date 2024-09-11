@@ -4,8 +4,8 @@ const Book = ({book}) => {
 const {bookName, image, author,category, rating,tags  } = book
  
 return (
-        <div >
-        <img src={image} alt="" width= "150px" height="150px" />
+    <div className="border-2 m-2 p-2 rounded-[10px] ">
+      <div className=" flex w-full justify-center">  <img  src={image} alt="" width= "150px" height="150px" /></div>
         <div className="flex">
             {
                 tags.map(hashtag => <HashTag hashtag={hashtag}></HashTag>)
