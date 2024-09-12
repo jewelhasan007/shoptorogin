@@ -24,19 +24,19 @@ const Header = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-     <li className="hover:bg-white"><NavLink  to= "/" 
+     <li className="hover:bg-white mx-3"><NavLink  to= "/" 
     className={({isActive})=>  {
       return isActive ? "text-green-400 font-bold border-2 border-green-400 bg-white " : "font-bold hover:border-green-400 bg-white";
     }}>
-   Home</NavLink></li>
+   ToDo Lists</NavLink></li>
 
-    <li className="hover:bg-white"><NavLink  to= "/listed" 
+    <li className="hover:bg-white mx-3"><NavLink  to= "/listed" 
     className={({isActive})=>  {
       return isActive ? "text-green-400 font-bold border-2 border-green-400 bg-white " : "font-bold hover:border-green-400 bg-white ";
     }}>
-   Listed Books</NavLink></li>
+   ProgHero lists</NavLink></li>
 
-    <li className="hover:bg-white"><NavLink  to= "/read" 
+    <li className="hover:bg-white mx-3"><NavLink  to= "/read" 
     className={({isActive})=>  {
       return isActive ? "text-green-400 font-bold border-2 border-green-400 :bg-white " : "font-bold hover:border-green-400 bg-white ";
     }}>
@@ -48,19 +48,19 @@ const Header = () => {
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
     
-    <li><NavLink  to= "/" 
+    <li className="mx-3"><NavLink  to= "/" 
     className={({isActive})=>  {
       return isActive ? "text-green-400 font-bold border-2 border-green-400 bg-white " : "font-bold hover:border-green-400 bg-white";
     }}>
-   Home</NavLink></li>
+   ToDo Lists</NavLink></li>
 
-    <li><NavLink  to= "/listed" 
+    <li className="mx-3"><NavLink  to= "/listed" 
     className={({isActive})=>  {
       return isActive ? "text-green-400 font-bold border-2 border-green-400 bg-white" : "font-bold hover:border-green-400 bg-white ";
     }}>
-   Listed Books</NavLink></li>
+   ProgHero lists</NavLink></li>
 
-    <li><NavLink  to= "/read" 
+    <li className="mx-3"><NavLink  to= "/read" 
     className={({isActive})=>  {
       return isActive ? "text-green-400 font-bold border-2 border-green-400 bg-white " : "font-bold hover:border-green-400 bg-white ";
     }}>
