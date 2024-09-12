@@ -13,7 +13,7 @@ const Books = () => {
     return (
         <div >
              <h1 className="text-4xl font-bold text-center my-5">books </h1>
-             <div className="grid grid-cols-3">
+             <div className="grid md:grid-cols-3">
              {books.map(book => <Book book={book}></Book>)}
              </div>
              </div>
