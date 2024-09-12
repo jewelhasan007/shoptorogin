@@ -7,6 +7,7 @@ const BookDetails = () => {
     console.log(book);
     return (
         <div className="m-4 p-3">
+            <h1>BOOK DETAILS</h1>
             <h1 className="text-2xl">Book Details for id: {bookId.id}</h1>
             <div className="grid gap-2 md:grid-cols-5">
                 <div className="border md:col-span-2">
