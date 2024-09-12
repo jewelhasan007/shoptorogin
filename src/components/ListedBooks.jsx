@@ -1,9 +1,23 @@
 
 const ListedBooks = () => {
     return (
-        <div>
-            Listed
-        </div>
+      
+            <div>
+            <div role="tablist" className="tabs tabs-lifted">
+  <input type="radio" name="my_tabs_2" role="tab" className="tab font-bold" aria-label="Read Books" />
+  <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
+    Tab content 1
+  </div>
+
+  <input type="radio" name="my_tabs_2" role="tab" className="tab font-bold" aria-label="Wishlist Books" defaultChecked />
+  <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
+    Tab content 2
+  </div>
+
+
+</div>
+</div>
+ 
     );
 };
 
