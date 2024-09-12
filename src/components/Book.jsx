@@ -2,7 +2,7 @@ import HashTag from "./HashTag"
 import { CiStar } from "react-icons/ci";
 import { Link } from "react-router-dom";
 const Book = ({book}) => {
-const {bookName, image, author,category, rating,tags, bookId  } = book
+const {bookName, image, author,category, rating, tags, bookId  } = book
  
 return (
     <div className="border-2 m-2 p-2 rounded-[10px] ">
