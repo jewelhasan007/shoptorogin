@@ -3,19 +3,25 @@ import HashTag from "./HashTag"
 import { Helmet } from "react-helmet";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { saveForRead } from "./StoredBook";
 
-const  handleReadToast = () =>{
-    toast('Successfull... || Read Added.');
-}
-const  handleWishToast = () =>{
-    toast('Successfull... || WishList Added.');
-}
+
+
 
 const BookDetails = () => {
     const books = useLoaderData();
      const bookId= useParams();  
     const book = books.find(book => book.bookId === bookId.id);
     console.log(book);
+
+    const  handleReadToast = () =>{
+        saveForRead(bookId);
+        toast('Successfull... || Read Added.');
+    }
+    const  handleWishToast = () =>{
+        toast('Successfull... || WishList Added.');
+    }
+
     return (
         <div className="mx-4 my-6 p-6">
             <Helmet><title>{book.bookName} || Book Vibe</title></Helmet>
