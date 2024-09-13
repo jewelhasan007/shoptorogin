@@ -1,6 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import HashTag from "./HashTag"
-
+import { Helmet } from "react-helmet";
 
 const BookDetails = () => {
     const books = useLoaderData();
@@ -9,6 +9,7 @@ const BookDetails = () => {
     console.log(book);
     return (
         <div className="mx-4 my-6 p-6">
+            <Helmet><title>{book.bookName} || Book Vibe</title></Helmet>
           
            
             <div className="grid gap-2 md:grid-cols-5">

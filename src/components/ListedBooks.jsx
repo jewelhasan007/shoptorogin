@@ -1,7 +1,9 @@
+import { Helmet } from "react-helmet";
 
 const ListedBooks = () => {
     return (
 <div>
+  <Helmet><title>Listed Books || Book Vibe</title></Helmet>
 <h1 className="text-center font-bold text-2xl m-3">Books</h1>
             <div role="tablist" className="tabs tabs-lifted">
   <input type="radio" name="my_tabs_2" role="tab" className="tab font-bold  [--tab-bg:gray] [--tab-border-color:green]" aria-label="Read Books" />

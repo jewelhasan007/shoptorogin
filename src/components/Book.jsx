@@ -5,6 +5,7 @@ const Book = ({book}) => {
 const {bookName, image, author,category, rating, tags, bookId  } = book
  
 return (
+    <Link to={`/read/${bookId}`}>
     <div className="border-2 m-2 p-2 rounded-[10px] ">
       <div className=" flex w-full justify-center">  <img  src={image} alt="" width= "150px" height="150px" /></div>
         <div className="flex">
@@ -21,12 +22,13 @@ return (
         <p className="text-2xl"><CiStar /></p></div>
 
         </div>
-            <div className=" flex w-full justify-center">
+            {/* <div className=" flex w-full justify-center">
                 <Link to={`/read/${bookId}`}>
                 <button className="btn bg-green-400">Book Details</button>
                 </Link>
-            </div>
+            </div> */}
         </div>
+        </Link>
     );
 };
 

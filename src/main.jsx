@@ -9,7 +9,7 @@ import ErrorPage from './components/ErrorPage.jsx';
 import Home from './components/Home.jsx';
 import ListedBooks from './components/ListedBooks.jsx';
 import PagesToRead from './components/PagesToRead.jsx';
-
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Root from './components/Root.jsx';
 import BookDetails from './components/BookDetails.jsx';
 
@@ -44,8 +44,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-
+<HelmetProvider>
  <RouterProvider router={router} />
-
+ </HelmetProvider>
   </StrictMode>,
 )

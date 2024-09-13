@@ -12,7 +12,7 @@ const Books = () => {
     },[])
     return (
         <div >
-             <h1 className="text-4xl font-bold text-center my-5">books </h1>
+             <h1 className="text-4xl font-bold text-center my-5">Books </h1>
              <div className="grid md:grid-cols-3">
              {books.map(book => <Book book={book}></Book>)}
              </div>
