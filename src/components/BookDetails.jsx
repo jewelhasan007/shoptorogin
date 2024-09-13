@@ -1,6 +1,15 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import HashTag from "./HashTag"
 import { Helmet } from "react-helmet";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
+const  handleReadToast = () =>{
+    toast('Successfull... || Read Added.');
+}
+const  handleWishToast = () =>{
+    toast('Successfull... || WishList Added.');
+}
 
 const BookDetails = () => {
     const books = useLoaderData();
@@ -40,11 +49,12 @@ const BookDetails = () => {
                     <p>Rating:  <span className="font-bold">{book.rating}</span></p>
                   
                     <div >
-                        <button className="btn btn-primary mx-3 my-5">Read</button>
-                        <button className="btn btn-primary mx-3">Wishlist</button>
+                        <button className="btn btn-primary mx-3 my-5" onClick={handleReadToast}>Read</button>
+                        <button className="btn btn-primary mx-3" onClick={handleWishToast}>Wishlist</button>
                     </div>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };
