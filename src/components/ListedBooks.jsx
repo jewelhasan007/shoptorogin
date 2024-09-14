@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 import { getStoredBookForRead } from "./StoredBook";
+import ListedReadBooks from "./ListedReadBooks";
 
 const ListedBooks = () => {
   const books = useLoaderData();
@@ -37,7 +38,7 @@ const ListedBooks = () => {
   
       <h1 className="text-3xl">Read Book Lists: {readBooks.length}</h1>
       {
-        readBooks.map(book => <li>{book.bookName}</li> )
+        readBooks.map(book => <li><ListedReadBooks book={book}></ListedReadBooks></li> )
       }
   </div>
 
