@@ -36,9 +36,9 @@ const ListedBooks = () => {
   <input type="radio" name="my_tabs_2" role="tab" className="tab font-bold  [--tab-bg:gray] [--tab-border-color:green]" aria-label="Read Books" />
   <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
   
-      <h1 className="text-3xl">Read Book Lists: {readBooks.length}</h1>
+      {/* <h1 className="text-3xl">Read Book Lists: {readBooks.length}</h1> */}
       {
-        readBooks.map(book => <li><ListedReadBooks book={book}></ListedReadBooks></li> )
+        readBooks.map(book => <ListedReadBooks book={book}></ListedReadBooks> )
       }
   </div>
 
