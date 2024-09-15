@@ -2,8 +2,8 @@ import HashTag from "./HashTag";
 import { Link } from "react-router-dom";
 
 const ListedReadBooks = ({book}) => {
-    const {image, bookName, author, tags, yearOfPublishing, publisher, totalPages, category, rating,bookId } = book
-    console.log(book)
+    const {image, bookName, author, tags, yearOfPublishing, publisher, totalPages, category, rating, bookId } = book
+  
     return (
         <div >
             <div className="grid gap-4 md:grid-cols-4 border-2 rounded-[10px] m-3 p-3 ">

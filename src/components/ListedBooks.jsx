@@ -3,17 +3,29 @@ import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 import { getStoredBookForRead } from "./StoredBook";
 import ListedReadBooks from "./ListedReadBooks";
+import { parse } from "postcss";
 
 const ListedBooks = () => {
   const books = useLoaderData();
+
   const [readBooks,setReadBooks] = useState([]);
+
   useEffect(()=>{
     const readList = getStoredBookForRead();
-    if(books.length >0){
+    console.log(readList)
+    console.log(typeof readList)
+    const readListInt = [];
+    for(const list of readList ){
+      const newList = parseInt(list)
+      console.log(newList)
+      const newReadListInt = readListInt.push(newList);
+      console.log(newReadListInt)
+    }
+
+ if(books.length >0){
 
      //WAY-01
       const readBookList = books.filter(book => readList.includes(book.bookId))
-
 
     //  WAY-02
       // const readBookList = [];
@@ -23,9 +35,7 @@ const ListedBooks = () => {
       //     readBookList.push(book)
       //   }
       // }
-
       setReadBooks(readBookList);
-      console.log(books, readList, readBookList)
     }
   },[])
     return (
