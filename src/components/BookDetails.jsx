@@ -9,7 +9,7 @@ import { saveForRead } from "./StoredBook";
 const BookDetails = () => {
     const books = useLoaderData();
      const bookId= useParams();  
-     const bookIdInt = parseInt(bookId);
+   
     const book = books.find(book => book.bookId === bookId.id);
     console.log(book);
 

@@ -1,12 +1,5 @@
 
-const saveForRead = bookId =>{
-const storedBookForReads = getStoredBookForRead();
-const exist = storedBookForReads.find(book => book === bookId.id);
-if(!exist){
-    storedBookForReads.push(bookId.id);
-    localStorage.setItem('Read-book',JSON.stringify(storedBookForReads))
-}
-}
+
 
 const getStoredBookForRead = () =>{
     const storedBookForRead =localStorage.getItem('Read-book');
@@ -15,5 +8,14 @@ const getStoredBookForRead = () =>{
     }
     return [];
 }
+
+const saveForRead = bookId =>{
+    const storedBookForReads = getStoredBookForRead();
+    const exist = storedBookForReads.find(book => book === bookId);
+    if(!exist){
+        storedBookForReads.push(bookId.id);
+        localStorage.setItem('Read-book',JSON.stringify(storedBookForReads))
+    }
+    }
 
 export {getStoredBookForRead, saveForRead}

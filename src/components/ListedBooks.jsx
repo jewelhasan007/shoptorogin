@@ -14,18 +14,9 @@ const ListedBooks = () => {
     const readList = getStoredBookForRead();
     console.log(readList)
     console.log(typeof readList)
-    const readListInt = [];
-    for(const list of readList ){
-      const newList = parseInt(list)
-      console.log(newList)
-      const newReadListInt = readListInt.push(newList);
-      console.log(newReadListInt)
-    }
-
- if(books.length >0){
-
+    if(books.length >0){
      //WAY-01
-      const readBookList = books.filter(book => readList.includes(book.bookId))
+      const readBookList = books.filter(book => readList.includes(book.bookId));
 
     //  WAY-02
       // const readBookList = [];
@@ -37,6 +28,7 @@ const ListedBooks = () => {
       // }
       setReadBooks(readBookList);
     }
+   
   },[])
     return (
 <div>
@@ -48,7 +40,7 @@ const ListedBooks = () => {
   
       {/* <h1 className="text-3xl">Read Book Lists: {readBooks.length}</h1> */}
       {
-        readBooks.map(book => <ListedReadBooks book={book}></ListedReadBooks> )
+        readBooks.map(book => <ListedReadBooks key={book.id} book={book}></ListedReadBooks> )
       }
   </div>
 

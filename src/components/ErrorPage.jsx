@@ -5,7 +5,7 @@ const ErrorPage = () => {
     console.log(error.message);
     return (
         <div>
-            THIS is ERROR PAGE...
+           <h1 className="text-2xl font-bold text-red-500"> Error: {error.message}</h1>
         </div>
     );
 };
