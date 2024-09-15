@@ -1,6 +1,4 @@
 
-
-
 const getStoredBookForRead = () =>{
     const storedBookForRead =localStorage.getItem('Read-book');
     if(storedBookForRead){
