@@ -6,11 +6,11 @@ const {bookName, image, author,category, rating, tags, bookId  } = book
  
 return (
     <Link to={`/read/${bookId}`}>
-    <div className="border-2 m-2 p-2 rounded-[10px] ">
-      <div className=" flex w-full justify-center">  <img  src={image} alt="" width= "150px" height="150px" /></div>
-        <div className="flex">
+    <div className="border-2 m-2 p-2 rounded-[10px] min-h-[350px] ">
+      <div className=" flex w-full justify-center ">  <img  src={image} alt="" width= "100px" height="100px" /></div>
+        <div className="flex text-[12px]">
             {
-                tags.map(hashtag => <HashTag hashtag={hashtag}></HashTag>)
+                tags.map(hashtag => <HashTag key={bookId} hashtag={hashtag}></HashTag>)
             }
         </div>
         <h3 className="font-bold text-2xl"> {bookName}</h3>
