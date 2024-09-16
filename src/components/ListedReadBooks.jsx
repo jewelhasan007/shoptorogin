@@ -7,11 +7,11 @@ const ListedReadBooks = ({book}) => {
     return (
         <div >
             <div className="grid gap-4 md:grid-cols-4 border-2 rounded-[10px] m-3 p-3 ">
-            <div className="col-span-1"><img src={book.image} alt="" width="150px" height="150px"/></div>
+            <div className="col-span-1 flex justify-center items-center"><img src={book.image} alt="" width="150px" height="150px"/></div>
             <div className="col-span-3">
-            <h2 className="text-4xl my-2">{book.bookName}</h2>
-            <h3 className="font-bold my-4">By:{book.author}</h3>
-            <div className="flex my-3">
+            <h2 className="text-4xl my-0">{book.bookName}</h2>
+            <h3 className="font-bold my-1">By:{book.author}</h3>
+            <div className="flex my-1">
                     <div className="flex">
                     {
                             book.tags.map(hashtag => <HashTag hashtag={hashtag}></HashTag>)
