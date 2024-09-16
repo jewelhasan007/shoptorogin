@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { saveForRead } from "./StoredBook";
+import { saveForWished } from "./WishedBook";
 
 
 const BookDetails = () => {
@@ -18,6 +19,7 @@ const BookDetails = () => {
         toast('Successfull... || Read Added.');
     }
     const  handleWishToast = () =>{
+        saveForWished(bookId);
         toast('Successfull... || WishList Added.');
     }
 

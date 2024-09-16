@@ -4,12 +4,15 @@ import { useLoaderData } from "react-router-dom";
 import { getStoredBookForRead } from "./StoredBook";
 import ListedReadBooks from "./ListedReadBooks";
 import { parse } from "postcss";
+import { getStoredBookForWished } from "./WishedBook";
 
 const ListedBooks = () => {
   const books = useLoaderData();
 
   const [readBooks,setReadBooks] = useState([]);
+  const [wishedBooks, setWishedBooks] = useState([]);
 
+  
   useEffect(()=>{
     const readList = getStoredBookForRead();
     console.log(readList)
@@ -30,6 +33,15 @@ const ListedBooks = () => {
     }
    
   },[])
+
+  useEffect(()=>{
+    const wishList = getStoredBookForWished();
+    if (books.length > 0){
+      const wishBookList = books.filter(book => wishList.includes(book.bookId));
+      setWishedBooks(wishBookList);
+    }
+  },[])
+
     return (
 <div>
   <Helmet><title>Listed Books || Book Vibe</title></Helmet>
@@ -46,7 +58,9 @@ const ListedBooks = () => {
 
   <input type="radio" name="my_tabs_2" role="tab" className="tab font-bold" aria-label="Wishlist Books" defaultChecked />
   <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
-    Tab content 2
+    {
+      wishedBooks.map(book => <ListedReadBooks key={book.id} book={book}></ListedReadBooks>)
+  }
   </div>
 </div>
 
