@@ -45,7 +45,18 @@ const ListedBooks = () => {
     return (
 <div>
   <Helmet><title>Listed Books || Book Vibe</title></Helmet>
+ 
 <h1 className="text-center font-bold text-2xl m-3">Books</h1>
+
+<div className="text-center">
+  <select className="select select-accent w-full max-w-xs bg-green-500 text-white font-bold">
+  <option disabled selected>Sort By</option>
+  <option>Rating</option>
+  <option>Number of Pages</option>
+  <option>Published year</option>
+</select>
+  </div>
+
             <div role="tablist" className="tabs tabs-lifted">
   <input type="radio" name="my_tabs_2" role="tab" className="tab font-bold  [--tab-bg:gray] [--tab-border-color:green]" aria-label="Read Books" />
   <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
