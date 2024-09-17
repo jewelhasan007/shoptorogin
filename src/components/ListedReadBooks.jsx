@@ -33,10 +33,7 @@ const ListedReadBooks = ({book}) => {
                     <Link  to={`/read/${bookId}`} className="mx-4"> <button className="btn btn-primary"> View Details</button></Link>
                     </div>
             </div>
-
-            </div>
-           
-      
+        </div>
         </div>
     );
 };

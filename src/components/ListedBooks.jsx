@@ -5,14 +5,37 @@ import { getStoredBookForRead } from "./StoredBook";
 import ListedReadBooks from "./ListedReadBooks";
 import { parse } from "postcss";
 import { getStoredBookForWished } from "./WishedBook";
+import { Link } from "react-router-dom";
 
 const ListedBooks = () => {
   const books = useLoaderData();
 
-  const [readBooks,setReadBooks] = useState([]);
+  const [readBooks, setReadBooks] = useState([]);
   const [wishedBooks, setWishedBooks] = useState([]);
 
-  
+  const [displayReadBooks, setDisplayReadBooks] = useState([])
+  const [displayWishedBooks, setDisplayWishedBooks] = useState([])
+
+  const handleDisplayFilter = filter =>{
+    if(filter === 'all'){
+      setDisplayReadBooks(readBooks);
+    }
+  else if (filter === 'category'){
+    const categoryBooks = readBooks.filter(book => book.category === 'Fiction');
+    console.log(categoryBooks);
+        setDisplayReadBooks(categoryBooks);
+  }
+  else if (filter === 'pages'){
+    const page = readBooks.filter(book => book.totalPages === 'pages');
+        setDisplayReadBooks(page);
+  }
+  else if (filter === 'year'){
+    const year = readBooks.filter(book => book.yearOfPublishing === 'year');
+        setDisplayReadBooks(year);
+  }
+
+  }
+
   useEffect(()=>{
     const readList = getStoredBookForRead();
     console.log(readList)
@@ -30,6 +53,8 @@ const ListedBooks = () => {
       //   }
       // }
       setReadBooks(readBookList);
+      setDisplayReadBooks(readBookList)
+
     }
    
   },[])
@@ -49,11 +74,12 @@ const ListedBooks = () => {
 <h1 className="text-center font-bold text-2xl m-3">Books</h1>
 
 <div className="text-center">
-  <select className="select select-accent w-full max-w-xs bg-green-500 text-white font-bold">
-  <option disabled selected>Sort By</option>
-  <option>Rating</option>
-  <option>Number of Pages</option>
-  <option>Published year</option>
+  <select className="select select-accent w-full max-w-xs bg-green-500 text-white font-bold" onChange={(e)=>handleDisplayFilter(e.target.value)}>
+<option value="all"> All</option>
+<option value="category"> category</option>
+<option value="pages">pages</option>
+<option value="published"> published</option>
+ 
 </select>
   </div>
 
@@ -63,14 +89,14 @@ const ListedBooks = () => {
   
       {/* <h1 className="text-3xl">Read Book Lists: {readBooks.length}</h1> */}
       {
-        readBooks.map(book => <ListedReadBooks key={book.id} book={book}></ListedReadBooks> )
+        displayReadBooks.map(book => <ListedReadBooks key={book.id} book={book}></ListedReadBooks> )
       }
   </div>
 
   <input type="radio" name="my_tabs_2" role="tab" className="tab font-bold" aria-label="Wishlist Books" defaultChecked />
   <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
     {
-      wishedBooks.map(book => <ListedReadBooks key={book.id} book={book}></ListedReadBooks>)
+      displayWishedBooks.map(book => <ListedReadBooks key={book.id} book={book}></ListedReadBooks>)
   }
   </div>
 </div>
