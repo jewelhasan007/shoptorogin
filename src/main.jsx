@@ -12,6 +12,7 @@ import PagesToRead from './components/PagesToRead.jsx';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Root from './components/Root.jsx';
 import BookDetails from './components/BookDetails.jsx';
+import Map from './components/Map.jsx';
 
 
 
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
           path: "/read/:id" ,
           element:<BookDetails></BookDetails>,
           loader: () => fetch('./books.json'),
+        },
+        {
+          path: "/map" ,
+          element:<Map></Map>,
+         
         },
    ],
   },

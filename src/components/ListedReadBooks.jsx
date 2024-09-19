@@ -17,7 +17,7 @@ const ListedReadBooks = ({book}) => {
                             book.tags.map(hashtag => <HashTag hashtag={hashtag}></HashTag>)
                         }
                     </div>
-                    <div className="flex my-5">
+                    <div className="flex my-6">
                     <p>Year of Publishing:  <span className="font-bold">{book.yearOfPublishing}</span></p>
                     </div>
                       

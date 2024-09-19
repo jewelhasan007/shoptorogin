@@ -65,6 +65,11 @@ const Header = () => {
       return isActive ? "text-green-500 font-bold border-2 border-green-500 bg-white " : "font-bold hover:border-green-500 bg-white ";
     }}>
    Page to Read</NavLink></li>
+    <li className="mx-3"><NavLink  to= "/map" 
+    className={({isActive})=>  {
+      return isActive ? "text-green-500 font-bold border-2 border-green-500 bg-white " : "font-bold hover:border-green-500 bg-white ";
+    }}>
+   Location</NavLink></li>
      
     </ul>
   </div>

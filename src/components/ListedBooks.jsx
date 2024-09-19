@@ -83,17 +83,16 @@ const ListedBooks = () => {
 </select>
   </div>
 
-            <div role="tablist" className="tabs tabs-lifted">
-  <input type="radio" name="my_tabs_2" role="tab" className="tab font-bold  [--tab-bg:gray] [--tab-border-color:green]" aria-label="Read Books" />
+  <div role="tablist" className="tabs tabs-lifted m-3 p-4">
+  <input type="radio" name="my_tabs_2" role="tab" className="tab font-bold  [--tab-bg:gray] [--tab-border-color:green]" aria-label="Read Books" defaultChecked/>
   <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
-  
-      {/* <h1 className="text-3xl">Read Book Lists: {readBooks.length}</h1> */}
+  {/* <h1 className="text-3xl">Read Book Lists: {readBooks.length}</h1> */}
       {
         displayReadBooks.map(book => <ListedReadBooks key={book.id} book={book}></ListedReadBooks> )
       }
   </div>
 
-  <input type="radio" name="my_tabs_2" role="tab" className="tab font-bold" aria-label="Wishlist Books" defaultChecked />
+  <input type="radio" name="my_tabs_2" role="tab" className="tab font-bold" aria-label="Wishlist Books"  />
   <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
     {
       displayWishedBooks.map(book => <ListedReadBooks key={book.id} book={book}></ListedReadBooks>)
