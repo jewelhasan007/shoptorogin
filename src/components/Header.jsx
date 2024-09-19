@@ -34,7 +34,7 @@ const Header = () => {
     className={({isActive})=>  {
       return isActive ? "text-green-400 font-bold border-2 border-green-500 bg-white " : "font-bold hover:border-green-500 bg-white ";
     }}>
-   Listed Book</NavLink></li>
+   Tob List</NavLink></li>
 
     <li className="hover:bg-white mx-3"><NavLink  to= "/read" 
     className={({isActive})=>  {
