@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 const Home = () => {
     return (
         <div className="m-5">
-            <Helmet><title>Home || Book Vibe</title></Helmet>
+            <Helmet><title>Home || shoptoronginmon</title></Helmet>
         <Hero></Hero>
         <Books></Books>
         </div>
