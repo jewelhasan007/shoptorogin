@@ -40,7 +40,7 @@ const Header = () => {
     className={({isActive})=>  {
       return isActive ? "text-green-500 font-bold border-2 border-green-500 :bg-white " : "font-bold hover:border-green-500 bg-white ";
     }}>
-   Page to Read</NavLink></li>
+   Products Lists</NavLink></li>
       </ul>
     </div>
     <a href="/" className="btn btn-ghost text-xl">Book Vibe</a>
@@ -58,13 +58,13 @@ const Header = () => {
     className={({isActive})=>  {
       return isActive ? "text-green-500 font-bold border-2 border-green-500 bg-white" : "font-bold hover:border-green-500 bg-white ";
     }}>
-   Listed Book</NavLink></li>
+   Tob Lists</NavLink></li>
 
     <li className="mx-3"><NavLink  to= "/read" 
     className={({isActive})=>  {
       return isActive ? "text-green-500 font-bold border-2 border-green-500 bg-white " : "font-bold hover:border-green-500 bg-white ";
     }}>
-   Page to Read</NavLink></li>
+   Products List</NavLink></li>
     <li className="mx-3"><NavLink  to= "/map" 
     className={({isActive})=>  {
       return isActive ? "text-green-500 font-bold border-2 border-green-500 bg-white " : "font-bold hover:border-green-500 bg-white ";
